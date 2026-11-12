@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a1d1a">
+  <meta name="description" content="Learn blackjack basic strategy, practice every decision against a realistic six-deck shoe and check your Hi-Lo running count. No money, no bets.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Blackjack Lab">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="stylesheet" href="./src/styles.css">
+  <title>Blackjack Lab — Practice the Right Move</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <button class="brand" data-screen="home" aria-label="Blackjack Lab home"><span class="brand-mark">21<span class="brand-suit">♠</span></span><span>BLACKJACK <strong>LAB</strong></span></button>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <button data-screen="home" class="nav-link active">Home</button>
+        <button data-screen="learn" class="nav-link">Learn</button>
+        <button data-screen="practice" class="nav-link">Practice</button>
+        <button data-screen="chart" class="nav-link">Strategy chart</button>
+        <button data-screen="stats" class="nav-link">Progress</button>
+      </nav>
+      <span class="status-pill"><span class="live-dot"></span> FREE · NO REAL MONEY</span>
+    </header>
+    <main id="main-content">
+      <section id="home" class="screen active" aria-labelledby="home-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dash"></span> YOUR PERSONAL BLACKJACK COACH</p>
+            <h1 id="home-title">Every hand.<br> <em>The right move.</em></h1>
+            <p class="hero-description">Stop guessing at the table. Learn blackjack from zero, play against a real six-deck shoe, and get instant feedback on every decision. All practice. No gambling.</p>
+            <div class="hero-actions"><button class="btn btn-gold btn-large" data-screen="practice">Start practicing <span aria-hidden="true">↗</span></button><button class="btn btn-outline btn-large" data-screen="learn">Learn the rules <span aria-hidden="true">→</span></button></div>
+            <div class="hero-facts"><span><b>6</b> Deck shoe</span><span><b>5</b> Main actions</span><span><b>∞</b> Practice hands</span></div>
+          </div>
+          <div class="hero-art" aria-hidden="true"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-card hero-card-back">✦<small>BLACKJACK LAB</small></div><div class="hero-card hero-card-left"><span>A</span><span>♠</span><strong>♠</strong></div><div class="hero-card hero-card-right"><span>K</span><span>♥</span><strong>♥</strong></div><div class="hero-chip"><span>21</span></div></div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-number">01 <span>↗</span></div><h3>Learn by doing</h3><p>A complete English guide to hit, stand, double, split, surrender, insurance, and dealer rules.</p></article>
+          <article class="feature"><div class="feature-number">02 <span>↗</span></div><h3>Instant corrections</h3><p>Wrong answer? See the right move, the exact rule, and why — then try again before the hand advances.</p></article>
+          <article class="feature"><div class="feature-number">03 <span>↗</span></div><h3>Real shoe practice</h3><p>Cards are dealt without replacement until the cut card. Optional Hi-Lo count checks sharpen your attention.</p></article>
+        </div>
+        <div class="rule-banner"><span>TABLE RULES</span><strong>6 decks · S17 · DAS · Late surrender · 3:2 · Dealer peek</strong><button data-screen="learn">Understand these rules →</button></div>
+      </section>
+      <section id="learn" class="screen content-screen" aria-labelledby="learn-title">
+        <p class="eyebrow">THE COMPLETE FOUNDATION</p><h1 id="learn-title">Learn the game.</h1><p class="section-intro">The goal is to beat the dealer without going over 21. You do <strong>not</strong> need to get as close to 21 as possible on every hand; the dealer's visible card changes the best decision.</p>
+        <div class="lesson-grid">
+          <article class="lesson"><div class="lesson-tag">LESSON 01</div><h2>Card values & winning</h2><p>2–10 are worth their number. J, Q and K are worth 10. Ace is worth 1 or 11, whichever helps without busting.</p><p><strong>Hard:</strong> no Ace currently counts as 11. <strong>Soft:</strong> an Ace counts as 11 (A + 6 = soft 17). <strong>Bust:</strong> total above 21, automatic loss.</p><p><strong>Natural blackjack:</strong> A + any 10-value card on your original two-card hand. It beats a regular 21, but ties dealer blackjack.</p></article>
+          <article class="lesson"><div class="lesson-tag">LESSON 02</div><h2>How a round works</h2><ol><li>You and the dealer each get two cards; one dealer card is face-up.</li><li>If dealer shows A, insurance is offered; basic strategy says <strong>decline</strong>.</li><li>Dealer peeks for blackjack with A or 10 showing. Natural blackjacks resolve immediately.</li><li>You make decisions until you stand, bust, double, surrender, or finish split hands.</li><li>The dealer reveals the hole card and draws to 17 or higher, standing on soft 17.</li><li>The higher valid total wins. Equal totals push. Winning natural blackjack normally pays 3:2.</li></ol></article>
+          <article class="lesson"><div class="lesson-tag">LESSON 03</div><h2>Your five actions</h2><div class="definition"><b>HIT</b><span>Take another card. You can keep hitting until you stand, reach 21 or bust.</span></div><div class="definition"><b>STAND</b><span>Keep your total and end this hand.</span></div><div class="definition"><b>DOUBLE</b><span>Double the hypothetical bet, take exactly one card, then stand. Available on any first two cards, including after a split.</span></div><div class="definition"><b>SPLIT</b><span>If your first two cards are the same value, make two hands. Up to four hands total. Split Aces receive one card each and cannot be re-split.</span></div><div class="definition"><b>SURRENDER</b><span>Give up half your hypothetical wager to end the original two-card hand, only after the dealer has checked for blackjack.</span></div></article>
+          <article class="lesson"><div class="lesson-tag">LESSON 04</div><h2>Our exact table rules</h2><div class="definition"><b>6 decks</b><span>312 cards shuffled together. Cards are not replaced between rounds; shuffle after about 75% penetration.</span></div><div class="definition"><b>S17</b><span>Dealer stands on every 17, including A + 6. Some actual casinos use H17 instead.</span></div><div class="definition"><b>DAS</b><span>Double After Split is allowed, including split hands with two cards.</span></div><div class="definition"><b>LS</b><span>Late Surrender is available on the original hand, but not all casinos offer it.</span></div><div class="definition"><b>3:2</b><span>A winning natural blackjack normally pays 3:2; this app never tracks stakes or pays money.</span></div></article>
+        </div>
+        <div class="callout-block"><span>THE SINGLE MOST IMPORTANT IDEA</span><h2>Play your cards <em>against their upcard.</em></h2><p>Hard 16 against dealer 6? Stand. Hard 16 against dealer 10? Surrender under our rules. Same hand, different correct answer.</p><button class="btn btn-gold" data-screen="chart">Open the full strategy chart →</button></div>
+        <div class="lesson-grid">
+          <article class="lesson"><div class="lesson-tag">LESSON 05</div><h2>Remember the core patterns</h2><ul><li>Hard 17+: always stand.</li><li>Hard 12: stand vs dealer 4–6, otherwise hit.</li><li>Hard 13–16: stand vs 2–6; otherwise hit unless surrender applies.</li><li>Hard 9: double vs 3–6. Hard 10: double vs 2–9. Hard 11: double vs 2–10.</li><li>Always split Aces and 8s. Never split 5s or 10-value pairs.</li><li>Soft 18: double vs 3–6, stand vs 2, 7–8, hit vs 9, 10, A.</li><li>Insurance/even money: decline in basic strategy.</li></ul></article>
+          <article class="lesson"><div class="lesson-tag">LESSON 06 · OPTIONAL</div><h2>Hi-Lo counting basics</h2><p>Only count <em>visible</em> cards. The dealer's face-down card counts when revealed.</p><div class="count-legend"><div><b>+1</b><span>2, 3, 4, 5, 6</span></div><div><b>0</b><span>7, 8, 9</span></div><div><b>−1</b><span>10, J, Q, K, A</span></div></div><p><strong>Running count (RC)</strong> adds these values since the last shuffle. <strong>True count (TC)</strong> ≈ RC ÷ decks unseen. The app lets you test yourself; counting does not affect its basic-strategy scoring.</p><p class="note">Important: basic strategy by itself does not produce a long-run player edge. Card counting never guarantees profits.</p></article>
+        </div>
+        <div class="center-actions"><button class="btn btn-gold btn-large" data-screen="practice">Start the first hand →</button></div>
+      </section>
+      <section id="practice" class="screen practice-screen" aria-labelledby="practice-title">
+        <div class="practice-toolbar"><div><p class="eyebrow">LIVE TRAINING TABLE</p><h1 id="practice-title">Decision practice <span class="little-star">✦</span></h1></div><div class="practice-toolbar-actions"><button id="count-toggle" class="ghost-button" aria-pressed="false">◉ Show count</button><button id="new-shoe" class="ghost-button" title="Start a fresh six-deck shoe">↺ New shoe</button></div></div>
+        <div class="score-strip"><div class="score-stat"><span>ACCURACY</span><strong id="score-accuracy">—</strong></div><div class="score-stat"><span>CORRECT</span><strong id="score-correct">0</strong></div><div class="score-stat"><span>STREAK</span><strong id="score-streak">0</strong></div><div class="score-stat"><span>HANDS PLAYED</span><strong id="score-hands">0</strong></div></div>
+        <div class="felt-table" id="felt-table">
+          <div class="table-meta"><span><span class="live-dot"></span> SHOE <b id="shoe-number">01</b></span><span id="shoe-progress">6 decks · cards remaining</span></div>
+          <div class="table-dealer"><div class="hand-heading"><span>DEALER</span><span class="total-pill" id="dealer-total">Showing —</span></div><div class="cards" id="dealer-cards" aria-label="Dealer cards"></div></div>
+          <div class="felt-rule"><span>BLACKJACK PAYS 3:2</span><span>DEALER STANDS ON ALL 17</span></div>
+          <div class="table-player"><div class="hand-heading"><span>YOUR HAND <small id="active-hand-tag"></small></span><span class="total-pill" id="player-total">—</span></div><div id="player-hands" class="player-hands"></div></div>
+          <div class="table-bottom"><span>6 DECKS</span><span>NO BETTING · PURE STRATEGY</span><span>75% CUT CARD</span></div>
+        </div>
+        <div id="decision-box" class="decision-box" aria-live="polite"><p class="decision-eyebrow">YOUR MOVE</p><h2 id="decision-question">What is the best decision?</h2><p id="decision-help">Choose the mathematically correct move for this rule set.</p><div id="actions" class="actions"></div><div id="feedback" class="feedback" hidden></div><div class="round-end-actions" id="round-end-actions" hidden><button id="next-hand" class="btn btn-gold btn-large">Deal next hand →</button><label class="switch-label"><input id="auto-deal" type="checkbox" checked> <span>Auto-deal next hand</span></label></div></div>
+        <div class="training-tools"><div id="count-panel" class="count-panel" hidden><div class="count-topline"><strong>HI-LO COUNT PRACTICE</strong><span id="count-result-status">Only visible cards count</span></div><div class="count-controls"><label for="count-guess">Your running count</label><input id="count-guess" type="number" inputmode="numeric" placeholder="e.g. +3"><button id="check-count" class="btn btn-outline" type="button">Check</button><button id="reveal-count" class="btn btn-plain" type="button">Reveal answer</button></div><div id="count-answer" class="count-answer" aria-live="polite">Hidden until you check or reveal</div></div><p class="training-footnote">Scored against multi-deck basic strategy (S17, DAS, late surrender). Every deal uses the same shoe until the cut card. The hidden dealer card is not counted before reveal.</p></div>
+      </section>
+      <section id="chart" class="screen content-screen" aria-labelledby="chart-title"><p class="eyebrow">YOUR COMPLETE CHEAT SHEET</p><h1 id="chart-title">Strategy chart.</h1><p class="section-intro">Find your hand on the left and the dealer's face-up card across the top. This chart matches the simulator exactly: 6 decks, S17, DAS and late surrender. After a split or a hit, some actions may no longer be available; the coach automatically grades the best <em>legal</em> fallback.</p><div class="chart-legend"><span><b class="tag-H">H</b> Hit</span><span><b class="tag-S">S</b> Stand</span><span><b class="tag-D">D</b> Double</span><span><b class="tag-P">P</b> Split</span><span><b class="tag-R">R</b> Surrender</span></div><div id="chart-tables"></div><p class="chart-note">Always decline insurance/even money under basic strategy. Do not split 5s or any 10-value pair. For exact strategy when action availability changes, use Practice mode.</p><div class="center-actions"><button class="btn btn-gold" data-screen="practice">Practice these rules →</button></div></section>
+      <section id="stats" class="screen content-screen" aria-labelledby="stats-title"><p class="eyebrow">YOUR LONG-TERM PROGRESS</p><h1 id="stats-title">Consistency wins.</h1><p class="section-intro">Your accuracy measures <em>strategy decisions</em>, not hand outcomes. All numbers save locally on this device. Keep practicing until your decisions are automatic.</p><div class="progress-grid"><div class="progress-tile"><span>DECISION ACCURACY</span><strong id="stat-accuracy">—</strong></div><div class="progress-tile"><span>CORRECT DECISIONS</span><strong id="stat-correct">0</strong></div><div class="progress-tile"><span>WRONG ATTEMPTS</span><strong id="stat-wrong">0</strong></div><div class="progress-tile"><span>BEST STREAK</span><strong id="stat-best">0</strong></div><div class="progress-tile"><span>ROUNDS FINISHED</span><strong id="stat-rounds">0</strong></div><div class="progress-tile"><span>PERFECT ROUNDS</span><strong id="stat-perfect">0</strong></div></div><div class="callout-block small-callout"><span>TRAINING TARGET</span><h2>Consistent correct decisions, <em>not quick wins.</em></h2><p>A practical milestone is several hundred hands with near-perfect accuracy, including pairs, soft hands, and surrender. This is a training goal, not a guarantee of casino profitability.</p><button class="btn btn-gold" data-screen="practice">Continue practicing →</button></div><button id="reset-stats" class="btn btn-danger-outline">Reset saved progress</button></section>
+    </main>
+    <footer class="site-footer"><span><b>BLACKJACK LAB</b> · Study the game, never chase losses.</span><span>Education only · No stakes · No accounts</span></footer>
+    <nav class="mobile-nav" aria-label="Bottom navigation"><button data-screen="home" class="active"><span>⌂</span>Home</button><button data-screen="learn"><span>▤</span>Learn</button><button data-screen="practice"><span>♠</span>Play</button><button data-screen="chart"><span>▦</span>Chart</button><button data-screen="stats"><span>◉</span>Stats</button></nav>
+  </div>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
